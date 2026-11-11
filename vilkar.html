@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vilkår | Styrevakt</title>
+<meta name="description" content="Brukervilkår for Styrevakt.">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@700;800&display=swap">
+<style>
+/* Én smal kolonne, som et ark fra appen: merke, innhold, kontakt */
+:root {
+  --bg: #EEF2F1; --surface: #FFFFFF; --surface2: #E3EAE8; --ink: #13201E; --muted: #5B6B68;
+  --line: #D3DDDA; --brand: #1E5B4F; --brand-soft: #D6E8E2; --signal: #B7791F;
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0E1615; --surface: #16211F; --surface2: #1E2B29; --ink: #E6EEEC; --muted: #9AABA7;
+  --line: #2A3936; --brand: #7CC4AE; --brand-soft: #1D3A33; --signal: #E3AE5A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0E1615; --surface: #16211F; --surface2: #1E2B29; --ink: #E6EEEC; --muted: #9AABA7;
+  --line: #2A3936; --brand: #7CC4AE; --brand-soft: #1D3A33; --signal: #E3AE5A; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 48px; }
+.wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+header { display: flex; align-items: center; gap: 12px; }
+header .name { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -0.3px; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; }
+nav a { font-weight: 600; font-size: 14px; color: var(--brand); text-decoration: none; background: var(--brand-soft); padding: 6px 14px; border-radius: 999px; }
+nav a:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+section { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+h1 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.2; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 21px; margin: 0; text-wrap: balance; }
+h3 { font-size: 16px; font-weight: 600; margin: 8px 0 0; }
+p, ul { margin: 0; }
+ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.lead { font-size: 18px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.hint { font-size: 13px; color: var(--muted); }
+.box { background: var(--surface2); border-radius: 10px; padding: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mail { font-weight: 600; font-size: 17px; user-select: all; word-break: break-all; }
+button { font: inherit; font-weight: 600; font-size: 14px; border: 0; border-radius: 10px; padding: 8px 14px; background: var(--brand); color: var(--bg); cursor: pointer; }
+a { color: var(--brand); }
+dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+dt { color: var(--muted); }
+dd { margin: 0; min-width: 0; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header><a href="/" style="display:contents;color:inherit;text-decoration:none">
+    <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="34" r="22" fill="none" stroke="var(--brand)" stroke-width="7"/>
+      <rect x="28.5" y="5.7" width="7" height="12.6" rx="3.5" fill="var(--brand)"/>
+      <circle cx="51.05" cy="23" r="6.65" fill="var(--signal)"/>
+    </svg>
+    <span class="name">Styrevakt</span>
+  </a></header>
+  <nav><a href="/personvern">Personvern</a><a href="/support">Support</a></nav>
+
+  <section id="vilkar">
+    <span class="eyebrow">Brukervilkår</span>
+    <h1>Vilkår for bruk av Styrevakt</h1>
+    <p class="lead">Disse vilkårene gjelder for appen Styrevakt og abonnementet Styrevakt+, levert av Snikkerbua Holding AS.</p>
+    <h3>1. Hva tjenesten er</h3>
+    <p>Styrevakt er et hjelpemiddel med påminnelser og generell informasjon om lovpålagte frister for aksjeselskap og enkeltpersonforetak. Tjenesten er ikke juridisk rådgivning, regnskapsføring, revisjon eller annen autorisert rådgivning, og erstatter ikke regnskapsfører eller advokat.</p>
+    <h3>2. Ditt ansvar</h3>
+    <p>Du er selv ansvarlig for at virksomheten oppfyller sine plikter, leverer oppgaver og betaler i tide. Du er også ansvarlig for at svarene du gir i appen, for eksempel om MVA-registrering og lønn, er riktige.</p>
+    <h3>3. Varsler</h3>
+    <p>Varsler planlegges på telefonen din og er en hjelp til å huske, ikke en garanti. De kan utebli hvis varsler er slått av, appen er slettet, telefonen er avslått eller operativsystemet stopper dem.</p>
+    <h3>4. Innhold og regelendringer</h3>
+    <p>Frister og satser sjekkes mot offentlige kilder og oppgis med dato for siste kontroll. Myndighetene kan endre regler, frister og satser. Det er alltid vedtak og informasjon fra Skatteetaten og Brønnøysundregistrene som gjelder.</p>
+    <h3>5.1 Ansvar</h3>
+    <p>Styrevakt er et hjelpemiddel for å holde oversikt. Du er selv ansvarlig for å overholde frister og levere opplysninger til myndighetene. Frister og satser i appen er generelle og tar ikke hensyn til forhold som gjelder deg særskilt, for eksempel utsatt frist, avvikende regnskapsår eller vedtak rettet mot deg. Kontroller fristen hos Skatteetaten, Brønnøysundregistrene eller i Altinn.</p>
+    <h3>5.2 Gratisfunksjonene</h3>
+    <p>Årshjul, guider og kalkulator leveres som de er. Vi er ikke ansvarlige for tap som følge av bruk av dem, med mindre tapet skyldes grov uaktsomhet eller forsett fra vår side.</p>
+    <h3>5.3 Næringsdrivende</h3>
+    <p>Kjøper du abonnementet som næringsdrivende eller på vegne av et selskap, gjelder følgende: Vi er ikke ansvarlige for indirekte tap. Vi er heller ikke ansvarlige for tvangsmulkt, forsinkelsesgebyr, renter, tilleggsskatt eller annet tap som følge av at en frist ikke er overholdt. Vårt samlede ansvar er uansett begrenset til det høyeste av beløpet du har betalt for tjenesten de siste 12 månedene og 5 000 kr. Begrensningene gjelder ikke ved grov uaktsomhet eller forsett fra vår side.</p>
+    <h3>5.4 Forbrukere</h3>
+    <p>Er du forbruker, har du de rettighetene som følger av digitalytelsesloven og annen ufravikelig lovgivning. Ingenting i disse vilkårene begrenser disse rettighetene.</p>
+    <h3>6. Personopplysninger</h3>
+    <p>Vi lagrer ingen opplysninger om deg eller virksomhetene dine. Svar og tall lagres bare på telefonen din. Oppslag på organisasjonsnummer går direkte fra telefonen til Brønnøysundregistrenes åpne register. Betaling håndteres av App Store eller Google Play.</p>
+    <h3>7. Abonnement</h3>
+    <p>Styrevakt+ koster 490 kr i året eller 59 kr i måneden og gjelder alle selskapene dine. Abonnementet kjøpes i App Store eller Google Play, fornyes automatisk og kan sies opp når som helst der. Vi minner deg om at abonnementet løper minst hver sjette måned.</p>
+    <h3>8. Prøveperiode</h3>
+    <p>Nye abonnenter får 14 dager gratis. Prøveperioden startes i App Store eller Google Play, og går automatisk over i et betalt abonnement når den er over. Sier du opp før prøveperioden er over, betaler du ingenting.</p>
+    <p class="hint">Sist oppdatert 11. november 2026.</p>
+  </section>
+</div>
+
+<script>
+document.getElementById("copy").addEventListener("click", function () {
+  var b = this, t = document.getElementById("mail").textContent;
+  var done = function () { b.textContent = "Kopiert"; setTimeout(function () { b.textContent = "Kopier"; }, 1800); };
+  var pick = function () { var r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  try { navigator.clipboard.writeText(t).then(done, pick); } catch (e) { pick(); }
+});
+</script>
+</body>
+</html>
