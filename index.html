@@ -2,6 +2,7 @@
 <html lang="nb">
 <head>
 <meta charset="utf-8">
+<meta name="color-scheme" content="light dark">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Styrevakt: alle fristene for selskapet ditt i ett årshjul</title>
 <meta name="description" content="Frister, gebyrer og guider for aksjeselskap, holding og enkeltpersonforetak. Skriv inn organisasjonsnummeret, så setter Styrevakt opp året ditt.">
@@ -12,201 +13,212 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@700;800&display=swap">
 <style>
+:root{color-scheme:light;
+ --bg:#EEF2F1;--surface:#FFFFFF;--ink:#13201E;--ink2:#3B4A47;--muted:#5B6B68;--line:#D3DDDA;
+ --brand:#1E5B4F;--on-brand:#FFFFFF;--signal:#B7791F;--danger-ink:#A3372F;
+ --band:#1E5B4F;--on-band:#FFFFFF;--on-band-2:#E6F0EC;--on-band-soft:#D6E8E2;--brand-soft:#D6E8E2}
+@media (prefers-color-scheme: dark){:root{color-scheme:dark;
+ --bg:#0E1615;--surface:#162220;--ink:#E6EEEC;--ink2:#B9C8C4;--muted:#93A5A1;--line:#2A3B38;
+ --brand:#7CC4AE;--on-brand:#0E1615;--signal:#E3AE5A;--danger-ink:#E8857C;
+ --band:#1F3A33;--on-band:#FFFFFF;--on-band-2:#D9E6E2;--on-band-soft:#A9D6C8;--brand-soft:#1F3A33}}
 html{scroll-behavior:smooth}
-body{margin:0;background:#EEF2F1}
-a{color:#1E5B4F}a:hover{color:#13201E}
-a:focus-visible{outline:2px solid #1E5B4F;outline-offset:3px;border-radius:4px}
+body{margin:0;background:var(--bg)}
+a{color:var(--brand)}a:hover{color:var(--ink)}
+a:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div style="background: #EEF2F1; color: #13201E; font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.55;">
+<div style="background: var(--bg); color: var(--ink); font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: 16px; line-height: 1.55;">
 
   <header style="max-width: 1200px; margin: 0 auto; padding: 20px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 32px;">
-    <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #13201E;">
-      <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="34" r="22" fill="none" stroke="#1E5B4F" stroke-width="7"></circle><rect x="28.5" y="5.7" width="7" height="12.6" rx="3.5" fill="#1E5B4F"></rect><circle cx="51.05" cy="23" r="6.65" fill="#B7791F"></circle></svg>
+    <a href="#top" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink);">
+      <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true"><circle style="stroke: var(--brand)" cx="32" cy="34" r="22" fill="none" stroke-width="7"></circle><rect style="fill: var(--brand)" x="28.5" y="5.7" width="7" height="12.6" rx="3.5"></rect><circle style="fill: var(--signal)" cx="51.05" cy="23" r="6.65"></circle></svg>
       <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 22px; letter-spacing: -0.3px;">Styrevakt</span>
     </a>
     <nav aria-label="Hovedmeny" style="display: flex; flex-wrap: wrap; gap: 8px 24px; flex: 1 1 auto; font-size: 15px; font-weight: 500;">
-      <a href="#funksjoner" style="text-decoration: none; color: #13201E;">Funksjoner</a>
-      <a href="#holding" style="text-decoration: none; color: #13201E;">Holding</a>
-      <a href="#pris" style="text-decoration: none; color: #13201E;">Pris</a>
-      <a href="#personvern" style="text-decoration: none; color: #13201E;">Personvern</a>
+      <a href="#funksjoner" style="text-decoration: none; color: var(--ink);">Funksjoner</a>
+      <a href="#holding" style="text-decoration: none; color: var(--ink);">Holding</a>
+      <a href="#pris" style="text-decoration: none; color: var(--ink);">Pris</a>
+      <a href="#personvern" style="text-decoration: none; color: var(--ink);">Personvern</a>
     </nav>
-    <a href="/demo/" style="background: #1E5B4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 12px;">Prøv demoen</a>
+    <a href="/demo/" style="background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 600; font-size: 15px; padding: 12px 20px; border-radius: 12px;">Prøv demoen</a>
   </header>
 
   <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px;">
     <div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 22px;">
-      <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #5B6B68;">For aksjeselskap, holding og ENK</span>
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);">For aksjeselskap, holding og ENK</span>
       <h1 style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(40px, 5vw, 64px); line-height: 1.04; letter-spacing: -1.2px; text-wrap: balance;">Alle fristene for selskapet ditt. I ett årshjul.</h1>
-      <p style="margin: 0; font-size: 19px; color: #3B4A47; max-width: 34em;">Skriv inn organisasjonsnummeret. Styrevakt setter opp året ditt, viser hva som skal leveres, hvor du leverer det og hva det kan koste hvis en frist glipper.</p>
+      <p style="margin: 0; font-size: 19px; color: var(--ink2); max-width: 34em;">Skriv inn organisasjonsnummeret. Styrevakt setter opp året ditt, viser hva som skal leveres, hvor du leverer det og hva det kan koste hvis en frist glipper.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
-        <a href="/demo/" style="background: #1E5B4F; color: #FFFFFF; text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 24px; border-radius: 12px;">Prøv demoen i nettleseren</a>
-        <span style="font-size: 14px; color: #5B6B68;">Kommer snart til iPhone</span>
+        <a href="/demo/" style="background: var(--brand); color: var(--on-brand); text-decoration: none; font-weight: 600; font-size: 16px; padding: 15px 24px; border-radius: 12px;">Prøv demoen i nettleseren</a>
+        <span style="font-size: 14px; color: var(--muted);">Kommer snart til iPhone</span>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px;">
-        <span style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Ingen innlogging</span>
-        <span style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Alt lagres på telefonen</span>
-        <span style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Sjekket mot kilde</span>
+        <span style="background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Ingen innlogging</span>
+        <span style="background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Alt lagres på telefonen</span>
+        <span style="background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 13px; font-weight: 500;">Sjekket mot kilde</span>
       </div>
     </div>
 
     <div style="flex: 0 1 340px; display: flex; justify-content: center; margin: 0 auto;">
-      <div style="width: 320px; max-width: 100%; background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 40px; padding: 22px 18px 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
+      <div style="width: 320px; max-width: 100%; background: var(--surface); border: 1px solid var(--line); border-radius: 40px; padding: 22px 18px 26px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px;">
         <div style="display: flex; align-items: center; justify-content: space-between;">
           <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 15px;">Styrevakt</span>
-          <span style="border: 1px solid #D3DDDA; border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600;">Ditt Selskap AS</span>
+          <span style="border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; font-size: 11px; font-weight: 600;">Ditt Selskap AS</span>
         </div>
-        <div style="background: #D6E8E2; border-radius: 10px; padding: 8px 10px; font-size: 12px; font-weight: 600;">Alt er i rute. Neste frist om 82 dager.</div>
+        <div style="background: var(--brand-soft); border-radius: 10px; padding: 8px 10px; font-size: 12px; font-weight: 600;">Alt er i rute. Neste frist om 82 dager.</div>
         <svg viewBox="0 0 300 300" width="100%" role="img" aria-label="Årshjul med frister de neste tolv månedene">
-          <circle cx="150" cy="150" r="112" fill="none" stroke="#D3DDDA" stroke-width="14"></circle>
-          <path d="M 150 38 A 112 112 0 0 1 251 102" fill="none" stroke="#1E5B4F" stroke-opacity="0.35" stroke-width="14" stroke-linecap="round"></path>
-          <circle cx="217" cy="60" r="4" fill="#B7791F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="251" cy="102" r="9" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="2.5"></circle>
-          <circle cx="261" cy="140" r="6" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="258" cy="176" r="4" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="226" cy="232" r="6" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="175" cy="259" r="6" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="110" cy="255" r="6" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="62" cy="219" r="4" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="40" cy="160" r="6" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <circle cx="68" cy="73" r="4" fill="#1E5B4F" stroke="#FFFFFF" stroke-width="1.5"></circle>
-          <line x1="150" y1="25" x2="150" y2="51" stroke="#13201E" stroke-width="2.5" stroke-linecap="round"></line>
-          <text x="150" y="126" font-size="10" font-family="Inter, sans-serif" font-weight="600" fill="#5B6B68" text-anchor="middle" letter-spacing="0.8">NESTE FRIST</text>
-          <text x="150" y="172" font-size="46" font-family="'Schibsted Grotesk', Arial, sans-serif" font-weight="800" fill="#13201E" text-anchor="middle">82</text>
-          <text x="150" y="192" font-size="10" font-family="Inter, sans-serif" font-weight="600" fill="#5B6B68" text-anchor="middle">DAGER</text>
+          <circle style="stroke: var(--line)" cx="150" cy="150" r="112" fill="none" stroke-width="14"></circle>
+          <path style="stroke: var(--brand)" d="M 150 38 A 112 112 0 0 1 251 102" fill="none" stroke-opacity="0.35" stroke-width="14" stroke-linecap="round"></path>
+          <circle style="fill: var(--signal); stroke: var(--surface)" cx="217" cy="60" r="4" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="251" cy="102" r="9" stroke-width="2.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="261" cy="140" r="6" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="258" cy="176" r="4" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="226" cy="232" r="6" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="175" cy="259" r="6" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="110" cy="255" r="6" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="62" cy="219" r="4" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="40" cy="160" r="6" stroke-width="1.5"></circle>
+          <circle style="fill: var(--brand); stroke: var(--surface)" cx="68" cy="73" r="4" stroke-width="1.5"></circle>
+          <line style="stroke: var(--ink)" x1="150" y1="25" x2="150" y2="51" stroke-width="2.5" stroke-linecap="round"></line>
+          <text style="fill: var(--muted)" x="150" y="126" font-size="10" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle" letter-spacing="0.8">NESTE FRIST</text>
+          <text style="fill: var(--ink)" x="150" y="172" font-size="46" font-family="'Schibsted Grotesk', Arial, sans-serif" font-weight="800" text-anchor="middle">82</text>
+          <text style="fill: var(--muted)" x="150" y="192" font-size="10" font-family="Inter, sans-serif" font-weight="600" text-anchor="middle">DAGER</text>
         </svg>
         <div style="text-align: center; display: flex; flex-direction: column; gap: 2px;">
-          <span style="font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #5B6B68;">Mandag 1. februar</span>
+          <span style="font-size: 10px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);">Mandag 1. februar</span>
           <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 700; font-size: 18px;">Aksjonærregisteroppgaven</span>
-          <span style="font-size: 12px; color: #A3372F; font-weight: 600;">672,50 kr per dag etter varsel, inntil 13 450 kr</span>
+          <span style="font-size: 12px; color: var(--danger-ink); font-weight: 600;">672,50 kr per dag etter varsel, inntil 13 450 kr</span>
         </div>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="koste" style="background: #FFFFFF; border-top: 1px solid #D3DDDA; border-bottom: 1px solid #D3DDDA;">
+  <section aria-labelledby="koste" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px;">
       <div style="display: flex; flex-direction: column; gap: 10px; max-width: 40em;">
-        <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #5B6B68;">Hvis fristen glipper</span>
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);">Hvis fristen glipper</span>
         <h2 id="koste" style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.5px;">En glemt frist kan koste mer enn du tror</h2>
-        <p style="margin: 0; color: #3B4A47;">Styrevakt viser hva det kan koste for hver frist, regnet med rettsgebyret for 2026. Slik ser du hva som haster mest.</p>
+        <p style="margin: 0; color: var(--ink2);">Styrevakt viser hva det kan koste for hver frist, regnet med rettsgebyret for 2026. Slik ser du hva som haster mest.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
-        <div style="border: 1px solid #D3DDDA; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: #EEF2F1;">
+        <div style="border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: var(--bg);">
           <span style="font-weight: 600;">Årsregnskapet for sent</span>
-          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: #A3372F; font-variant-numeric: tabular-nums;">inntil 69 940 kr</span>
-          <span style="font-size: 14px; color: #3B4A47;">Gebyret starter automatisk 1. august, uten varsel. Etter seks måneder kan selskapet bli tvangsoppløst.</span>
+          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: var(--danger-ink); font-variant-numeric: tabular-nums;">inntil 69 940 kr</span>
+          <span style="font-size: 14px; color: var(--ink2);">Gebyret starter automatisk 1. august, uten varsel. Etter seks måneder kan selskapet bli tvangsoppløst.</span>
         </div>
-        <div style="border: 1px solid #D3DDDA; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: #EEF2F1;">
+        <div style="border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: var(--bg);">
           <span style="font-weight: 600;">Skattemelding eller MVA-melding</span>
-          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: #A3372F; font-variant-numeric: tabular-nums;">inntil 67 250 kr</span>
-          <span style="font-size: 14px; color: #3B4A47;">Tvangsmulkt for hver dag etter fristen i varselet fra Skatteetaten.</span>
+          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: var(--danger-ink); font-variant-numeric: tabular-nums;">inntil 67 250 kr</span>
+          <span style="font-size: 14px; color: var(--ink2);">Tvangsmulkt for hver dag etter fristen i varselet fra Skatteetaten.</span>
         </div>
-        <div style="border: 1px solid #D3DDDA; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: #EEF2F1;">
+        <div style="border: 1px solid var(--line); border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 8px; background: var(--bg);">
           <span style="font-weight: 600;">A-melding</span>
-          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: #A3372F; font-variant-numeric: tabular-nums;">134 kr per dag</span>
-          <span style="font-size: 14px; color: #3B4A47;">For hver person det mangler eller er feil i opplysningene om.</span>
+          <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 30px; color: var(--danger-ink); font-variant-numeric: tabular-nums;">134 kr per dag</span>
+          <span style="font-size: 14px; color: var(--ink2);">For hver person det mangler eller er feil i opplysningene om.</span>
         </div>
       </div>
-      <p style="margin: 0; font-size: 12px; color: #5B6B68;">Beløpene er maksimalsatser etter rettsgebyrloven, skatteforvaltningsloven og regnskapsloven. Sjekket mot kilde 11. november 2026.</p>
+      <p style="margin: 0; font-size: 12px; color: var(--muted);">Beløpene er maksimalsatser etter rettsgebyrloven, skatteforvaltningsloven og regnskapsloven. Sjekket mot kilde 11. november 2026.</p>
     </div>
   </section>
 
   <section id="funksjoner" aria-labelledby="funk" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 32px;">
     <h2 id="funk" style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.5px; max-width: 20em;">Det du trenger for å ha kontroll på året</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 2v3M12 9v4l3 2"></path></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="13" r="8"></circle><path d="M12 2v3M12 9v4l3 2"></path></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Årshjulet</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">Alle frister de neste tolv månedene. Dra fingeren rundt hjulet for å bla gjennom året. Helg og helligdager er regnet inn.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">Alle frister de neste tolv månedene. Dra fingeren rundt hjulet for å bla gjennom året. Helg og helligdager er regnet inn.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"></path><path d="M10 21h4"></path></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Varsel før hver frist</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">Du velger hvor mange dager før. Varslene planlegges på telefonen, uten server.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">Du velger hvor mange dager før. Varslene planlegges på telefonen, uten server.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M9 12h7M9 16h7"></path></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"></path><path d="M9 12h7M9 16h7"></path></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Guider på ditt nivå</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">«Hva gjør jeg hvis …» med svar i hverdagsspråk, vanlig fagspråk eller kort med paragraf. Du velger selv.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">«Hva gjør jeg hvis …» med svar i hverdagsspråk, vanlig fagspråk eller kort med paragraf. Du velger selv.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"></path><path d="M9 12l2 2 4-4"></path></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Hva det kan koste</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">For hver frist ser du gebyr og tvangsmulkt, med lovhjemmel og kilde under.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">For hver frist ser du gebyr og tvangsmulkt, med lovhjemmel og kilde under.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Rett i kalenderen</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">Legg én frist eller hele året inn i kalenderen du allerede bruker.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">Legg én frist eller hele året inn i kalenderen du allerede bruker.</p>
       </div>
-      <div style="background: #FFFFFF; border: 1px solid #D3DDDA; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1E5B4F" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1.5"></rect><rect x="13" y="4" width="8" height="7" rx="1.5"></rect><rect x="8" y="14" width="8" height="7" rx="1.5"></rect></svg>
+      <div style="background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--brand)" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="4" width="8" height="7" rx="1.5"></rect><rect x="13" y="4" width="8" height="7" rx="1.5"></rect><rect x="8" y="14" width="8" height="7" rx="1.5"></rect></svg>
         <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Alle selskapene dine</h3>
-        <p style="margin: 0; font-size: 15px; color: #3B4A47;">Driftsselskap, holding og ENK i samme app. Så mange du vil, uten ekstra kostnad.</p>
+        <p style="margin: 0; font-size: 15px; color: var(--ink2);">Driftsselskap, holding og ENK i samme app. Så mange du vil, uten ekstra kostnad.</p>
       </div>
     </div>
   </section>
 
-  <section id="holding" aria-labelledby="hold" style="background: #1E5B4F; color: #FFFFFF;">
+  <section id="holding" aria-labelledby="hold" style="background: var(--band); color: var(--on-band);">
     <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center;">
       <div style="flex: 1 1 420px; min-width: 0; display: flex; flex-direction: column; gap: 16px;">
-        <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #D6E8E2;">For holdingselskaper</span>
+        <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--on-band-soft);">For holdingselskaper, med Styrevakt+</span>
         <h2 id="hold" style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.5px;">Hele konsernet i ett årshjul</h2>
-        <p style="margin: 0; color: #E6F0EC; font-size: 17px;">Legg til datterselskapene, så ser du alle fristene samlet. Styrevakt minner deg på å holde datterens generalforsamling først, og har egne guider om utbytte, konsernbidrag og lån mellom selskapene og deg.</p>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #E6F0EC;">
+        <p style="margin: 0; color: var(--on-band-2); font-size: 17px;">Legg til datterselskapene, så ser du alle fristene samlet. Styrevakt minner deg på å holde datterens generalforsamling først, og har egne guider om utbytte, konsernbidrag og lån mellom selskapene og deg.</p>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: var(--on-band-2);">
           <li>Årlig sjekkliste for holding</li>
           <li>Kalkulator for uttak fra datter via holding til deg</li>
           <li>Foreslår holding ut fra Enhetsregisteret</li>
         </ul>
       </div>
-      <div style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; color: #13201E; border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 4px;">
-        <span style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #5B6B68;">Eksempel: fra datter til deg</span>
-        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0 6px; border-bottom: 1px solid #D3DDDA;"><span style="color: #5B6B68;">Utbytte fra datteren</span><span style="font-variant-numeric: tabular-nums; font-weight: 500;">500 000 kr</span></div>
-        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0;"><span style="color: #5B6B68;">Skatt i holding, 0,66 %</span><span style="font-variant-numeric: tabular-nums;">− 3 300 kr</span></div>
-        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0;"><span style="color: #5B6B68;">Skatt for deg, 37,84 %</span><span style="font-variant-numeric: tabular-nums;">− 187 951 kr</span></div>
-        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 0 4px; border-top: 1px solid #D3DDDA;"><span style="font-weight: 600;">Igjen til deg</span><span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 26px; font-variant-numeric: tabular-nums;">308 749 kr</span></div>
-        <span style="font-size: 12px; color: #5B6B68;">Satser for 2026, uten skjermingsfradrag. Holding eier under 90 prosent. Viser regnestykket, ikke råd om hva du bør velge.</span>
+      <div style="flex: 1 1 380px; min-width: 0; background: var(--surface); color: var(--ink); border-radius: 14px; padding: 24px; display: flex; flex-direction: column; gap: 4px;">
+        <span style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);">Eksempel: fra datter til deg</span>
+        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 10px 0 6px; border-bottom: 1px solid var(--line);"><span style="color: var(--muted);">Utbytte fra datteren</span><span style="font-variant-numeric: tabular-nums; font-weight: 500;">500 000 kr</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0;"><span style="color: var(--muted);">Skatt i holding, 0,66 %</span><span style="font-variant-numeric: tabular-nums;">− 3 300 kr</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 8px 0;"><span style="color: var(--muted);">Skatt for deg, 37,84 %</span><span style="font-variant-numeric: tabular-nums;">− 187 951 kr</span></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 0 4px; border-top: 1px solid var(--line);"><span style="font-weight: 600;">Igjen til deg</span><span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 26px; font-variant-numeric: tabular-nums;">308 749 kr</span></div>
+        <span style="font-size: 12px; color: var(--muted);">Satser for 2026, uten skjermingsfradrag. Holding eier under 90 prosent. Viser regnestykket, ikke råd om hva du bør velge.</span>
       </div>
     </div>
   </section>
 
   <section id="personvern" aria-labelledby="pv" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 28px;">
     <div style="display: flex; flex-direction: column; gap: 10px; max-width: 40em;">
-      <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #5B6B68;">Personvern</span>
+      <span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted);">Personvern</span>
       <h2 id="pv" style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.5px;">Vi ser ingenting av det du legger inn</h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
-      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1E5B4F; padding-top: 14px;"><span style="font-weight: 600;">Alt ligger på telefonen</span><span style="font-size: 15px; color: #3B4A47;">Selskaper, svar og innstillinger lagres bare i appen. Vi har ingen server som tar imot dem.</span></div>
-      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1E5B4F; padding-top: 14px;"><span style="font-weight: 600;">Oppslag rett mot Brønnøysund</span><span style="font-size: 15px; color: #3B4A47;">Organisasjonsnummeret slås opp direkte fra telefonen i det åpne registeret, ikke via oss.</span></div>
-      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid #1E5B4F; padding-top: 14px;"><span style="font-weight: 600;">Ingen innlogging eller sporing</span><span style="font-size: 15px; color: #3B4A47;">Ingen konto, ingen reklame og ingen analyseverktøy. <a href="/personvern">Les personvernerklæringen</a>.</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--brand); padding-top: 14px;"><span style="font-weight: 600;">Alt ligger på telefonen</span><span style="font-size: 15px; color: var(--ink2);">Selskaper, svar og innstillinger lagres bare i appen. Vi har ingen server som tar imot dem.</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--brand); padding-top: 14px;"><span style="font-weight: 600;">Oppslag rett mot Brønnøysund</span><span style="font-size: 15px; color: var(--ink2);">Organisasjonsnummeret slås opp direkte fra telefonen i det åpne registeret, ikke via oss.</span></div>
+      <div style="display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--brand); padding-top: 14px;"><span style="font-weight: 600;">Ingen innlogging eller sporing</span><span style="font-size: 15px; color: var(--ink2);">Ingen konto, ingen reklame og ingen analyseverktøy. <a href="/personvern">Les personvernerklæringen</a>.</span></div>
     </div>
   </section>
 
-  <section id="pris" aria-labelledby="prisT" style="background: #FFFFFF; border-top: 1px solid #D3DDDA; border-bottom: 1px solid #D3DDDA;">
+  <section id="pris" aria-labelledby="prisT" style="background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
     <div style="max-width: 1200px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 28px;">
       <h2 id="prisT" style="margin: 0; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: clamp(28px, 3vw, 40px); line-height: 1.1; letter-spacing: -0.5px;">Pris</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px;">
-        <div style="border: 1px solid #D3DDDA; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; background: #EEF2F1;">
+        <div style="border: 1px solid var(--line); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; background: var(--bg);">
           <span style="font-weight: 600; font-size: 18px;">Gratis</span>
           <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 40px; font-variant-numeric: tabular-nums;">0 kr</span>
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px;">
             <li>Årshjul for alle selskapene dine</li>
-            <li>Guider og kalkulatorer</li>
-            <li>Frister til kalenderen</li>
+            <li>Guider på tre nivåer</li>
+            <li>Hva hver frist kan koste</li>
           </ul>
         </div>
-        <div style="border: 2px solid #1E5B4F; border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF;">
-          <span style="font-weight: 600; font-size: 18px;">Med varsler</span>
+        <div style="border: 2px solid var(--brand); border-radius: 14px; padding: 28px; display: flex; flex-direction: column; gap: 12px; background: var(--surface);">
+          <span style="font-weight: 600; font-size: 18px;">Styrevakt+</span>
           <span style="font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 40px; font-variant-numeric: tabular-nums;">490 kr <span style="font-size: 18px; font-weight: 700;">i året</span></span>
+          <span style="font-size: 14px; color: var(--ink2);">eller 59 kr i måneden. 14 dager gratis.</span>
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 15px;">
             <li>Alt i gratisversjonen</li>
             <li>Varsel før hver frist, du velger hvor tidlig</li>
-            <li>Ubegrenset antall selskaper</li>
+            <li>Frister i kalenderen med påminnelser</li>
+            <li>Holding: konsern, sjekkliste og uttakskalkulator</li>
+            <li>Så mange selskaper du vil</li>
           </ul>
-          <span style="font-size: 13px; color: #5B6B68;">Kjøpes og sies opp i App Store.</span>
+          <span style="font-size: 13px; color: var(--muted);">Etter prøveperioden fornyes abonnementet automatisk. Sier du opp i App Store før de 14 dagene er over, betaler du ingenting.</span>
         </div>
       </div>
     </div>
@@ -214,7 +226,7 @@ a:focus-visible{outline:2px solid #1E5B4F;outline-offset:3px;border-radius:4px}
 
   <section aria-labelledby="kilde" style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 24px 48px; align-items: flex-start;">
     <h2 id="kilde" style="margin: 0; flex: 1 1 300px; font-family: 'Schibsted Grotesk', Arial, sans-serif; font-weight: 800; font-size: 28px; line-height: 1.15;">Sjekket mot kilde, med dato</h2>
-    <p style="margin: 0; flex: 2 1 420px; color: #3B4A47;">Hver frist og regel i appen har lovhjemmel og kilde fra Skatteetaten, Brønnøysundregistrene eller Lovdata, og datoen den sist ble sjekket. Styrevakt hjelper deg å holde oversikt, men er ikke juridisk eller regnskapsfaglig rådgivning. Ved tvil, spør regnskapsføreren din.</p>
+    <p style="margin: 0; flex: 2 1 420px; color: var(--ink2);">Hver frist og regel i appen har lovhjemmel og kilde fra Skatteetaten, Brønnøysundregistrene eller Lovdata, og datoen den sist ble sjekket. Styrevakt hjelper deg å holde oversikt, men er ikke juridisk eller regnskapsfaglig rådgivning. Ved tvil, spør regnskapsføreren din.</p>
   </section>
 
   <footer style="background: #13201E; color: #E6EEEC;">
