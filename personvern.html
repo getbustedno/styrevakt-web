@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Personvern | Styrevakt</title>
+<meta name="description" content="Personvernerklæring for Styrevakt.">
+<link rel="icon" href="/favicon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Schibsted+Grotesk:wght@700;800&display=swap">
+<style>
+/* Én smal kolonne, som et ark fra appen: merke, innhold, kontakt */
+:root {
+  --bg: #EEF2F1; --surface: #FFFFFF; --surface2: #E3EAE8; --ink: #13201E; --muted: #5B6B68;
+  --line: #D3DDDA; --brand: #1E5B4F; --brand-soft: #D6E8E2; --signal: #B7791F;
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --text: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0E1615; --surface: #16211F; --surface2: #1E2B29; --ink: #E6EEEC; --muted: #9AABA7;
+  --line: #2A3936; --brand: #7CC4AE; --brand-soft: #1D3A33; --signal: #E3AE5A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0E1615; --surface: #16211F; --surface2: #1E2B29; --ink: #E6EEEC; --muted: #9AABA7;
+  --line: #2A3936; --brand: #7CC4AE; --brand-soft: #1D3A33; --signal: #E3AE5A; color-scheme: dark }
+body { background: var(--bg); color: var(--ink); font-family: var(--text); font-size: 16px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 32px 48px; }
+.wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+header { display: flex; align-items: center; gap: 12px; }
+header .name { font-family: var(--display); font-weight: 800; font-size: 26px; letter-spacing: -0.3px; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; }
+nav a { font-weight: 600; font-size: 14px; color: var(--brand); text-decoration: none; background: var(--brand-soft); padding: 6px 14px; border-radius: 999px; }
+nav a:focus-visible, a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+section { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+h1 { font-family: var(--display); font-weight: 800; font-size: 28px; line-height: 1.2; margin: 0; text-wrap: balance; }
+h2 { font-family: var(--display); font-weight: 700; font-size: 21px; margin: 0; text-wrap: balance; }
+h3 { font-size: 16px; font-weight: 600; margin: 8px 0 0; }
+p, ul { margin: 0; }
+ul { padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+.lead { font-size: 18px; }
+.eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); }
+.hint { font-size: 13px; color: var(--muted); }
+.box { background: var(--surface2); border-radius: 10px; padding: 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.mail { font-weight: 600; font-size: 17px; user-select: all; word-break: break-all; }
+button { font: inherit; font-weight: 600; font-size: 14px; border: 0; border-radius: 10px; padding: 8px 14px; background: var(--brand); color: var(--bg); cursor: pointer; }
+a { color: var(--brand); }
+dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; }
+dt { color: var(--muted); }
+dd { margin: 0; min-width: 0; }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header><a href="/" style="display:contents;color:inherit;text-decoration:none">
+    <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="34" r="22" fill="none" stroke="var(--brand)" stroke-width="7"/>
+      <rect x="28.5" y="5.7" width="7" height="12.6" rx="3.5" fill="var(--brand)"/>
+      <circle cx="51.05" cy="23" r="6.65" fill="var(--signal)"/>
+    </svg>
+    <span class="name">Styrevakt</span>
+  </a></header>
+  <nav><a href="/personvern">Personvern</a><a href="/support">Support</a></nav>
+
+  <section id="personvern">
+    <span class="eyebrow">Personvernerklæring</span>
+    <h1>Styrevakt samler ikke inn data om deg</h1>
+    <p class="lead">Alt du legger inn i appen blir liggende på telefonen din. Vi har ingen server som tar imot opplysninger fra appen, og vi kan ikke se hva du har lagt inn.</p>
+
+    <h3>Hva som lagres på telefonen</h3>
+    <ul>
+      <li>Selskapene du legger til: organisasjonsnummer, navn og opplysninger hentet fra Enhetsregisteret.</li>
+      <li>Valgene dine: om selskapet har MVA, lønn eller revisor, omsetningsintervall for enkeltpersonforetak, kunnskapsnivå og hvilke frister du har markert som levert.</li>
+      <li>Innstillinger for varsler.</li>
+    </ul>
+    <p>Dette lagres bare lokalt i appen. Det sendes ikke til oss eller andre. Sletter du appen, slettes dataene.</p>
+
+    <h3>Oppslag i Brønnøysundregistrene</h3>
+    <p>Når du søker opp et organisasjonsnummer, henter telefonen opplysningene direkte fra Brønnøysundregistrenes åpne tjeneste (data.brreg.no). Forespørselen går ikke via oss. Brønnøysundregistrene ser forespørselen på samme måte som når du besøker nettsiden deres.</p>
+
+    <h3>Varsler og kalender</h3>
+    <p>Varsler planlegges lokalt på telefonen. Vi sender ingen varsler fra en server. Når du legger frister i kalenderen, lager appen en kalenderfil på telefonen som du selv velger hvor du vil sende.</p>
+
+    <h3>Ingen sporing</h3>
+    <p>Appen har ikke analyseverktøy, reklame, sporing eller innlogging. Vi bruker ikke informasjonskapsler.</p>
+
+    <h3>Lenker til andre tjenester</h3>
+    <p>Appen lenker til Altinn, Skatteetaten og Brønnøysundregistrene. Når du åpner dem, gjelder deres personvernerklæringer.</p>
+
+    <h3>Kjøp</h3>
+    <p>Dersom appen får betalte funksjoner, håndteres betalingen av Apple eller Google. Vi får ikke betalingsopplysningene dine.</p>
+
+    <h3>Behandlingsansvarlig</h3>
+    <p>Snikkerbua Holding AS gir ut appen. Siden vi ikke samler inn personopplysninger, behandler vi ingen opplysninger om deg gjennom appen. Har du spørsmål, kontakt oss på adressen under. Du kan også klage til Datatilsynet.</p>
+    <p class="hint">Sist oppdatert 11. november 2026.</p>
+  </section>
+</div>
+
+<script>
+document.getElementById("copy").addEventListener("click", function () {
+  var b = this, t = document.getElementById("mail").textContent;
+  var done = function () { b.textContent = "Kopiert"; setTimeout(function () { b.textContent = "Kopier"; }, 1800); };
+  var pick = function () { var r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+  try { navigator.clipboard.writeText(t).then(done, pick); } catch (e) { pick(); }
+});
+</script>
+</body>
+</html>
